@@ -76,7 +76,7 @@ Esta falacia se da cuando no se toma la aletoriedad en consideración
 - También sucede cuando uno se enfoca en la similitudes e ignora las diferencias
 - Cuando fallamos al empezar a recolectar datos antes de generar una hipotesis estamos en alto riesgo de caer en esta falacia (muy común en Data Science)
 
-![Falacia del francotirador](./img/falacia_franco.jpg)
+![Falacia del francotirador](./img/Falacia_Franco.jpg)
 
 La falacia del francotirador consiste en primero disparar y posteriormente pintar los blancos.
 
