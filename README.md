@@ -9,6 +9,7 @@ curso de introduccion al pensamiento probabilistico de PLATZI
 Probabilidad de A (Hipotesis) dado B (evidencia)
 
 
+# Mentiras estadisticas
 
 ## Garbage in, garbage out (GIGO)
 Son como un tercer nivel de errores donde tenemos
@@ -126,3 +127,87 @@ Esta falacia sucede cuando atribuimos efectos de causalidad a eventos que simple
 >Como cuando un deportista tiene su peor racha en la liga y el entrenador lo regaña o castiga para que mejore, posteriormente el deportista ya no la riega tan feo. Sin embargo esto sucede porque tiende a la media, a su juego normal, no porque el entrenador haya aplicado la medida correcta.
 
 Esta falacia ocurre unicamente  cuando los eventos fluctuan 
+
+# INTRODUCCION A MACHINE LEARNING
+
+¿Que es?
+
+> Es el campo de estudio que le da a las computadoras la habilidad de aprender sin ser explícitamente programadas.
+> - Artur Samuel, 1959
+
+Machine Learning no es TERMINATOR. Son algoritmos que se utilizan principalmente en la detección de patrones.
+
+
+Todo comienza con el **TEOREMA DE BAYES**.
+Nos enseña como incorporar la evidencia y los datos que obtenemos del mundo real de una forma cada vez más correctas.
+
+![Teorema de bayes](https://miro.medium.com/max/3200/1*as2DnWuAUVLSZpS6MvPZxw.png)
+
+
+*Posteriormente*, Alan Turing nos otorgó una forma de ver a los algoritmos como el mismo algoritmo (**maquinas de turing**), dando la base de las computadoras modernas. Sino tambien las bases para que las computadoras pudieran aprender.
+
+![Alan Turing](https://ba994713-a-62cb3a1a-s-sites.googlegroups.com/site/bionicagalandeblasdesign/personajes/alan-turing-1/Alan-Turing-el-hombre-que-enseno-a-pensar-a-las-maquinas.jpg?attachauth=ANoY7cq-h5HWjHeogFZVfAHxv0b3Il5jo_n210OgHVcR2GusgOf0tbxmSy_3SkXLOs6DiVB-u0LzUHy6cRAZX-VbxN9-yK5Z1HdsV_sUfXJJ3TyhWceukfeD8wXDu-q7Z0MtcTUx01ittzGEzfT04hdI32CmLaz69Pue0x66sjdIXBoLTI6ldjKd4EiApcf_fQbkTvVJ93UM4f7E9bNmj-0q3aNB3nQkuaHzvijGUO-yV7ybqtbREjt1FoqHUsHA1IecfYHT3FQmWrChJg43f9zeJ_7vETRO9BFvvfNyWM7_I9Sx9WuZ6wtvfkYAcp1ERiVU7aIst9gIjyHWdJ2_P9gJuhurDPfutw%3D%3D&attredirects=0)
+
+*Años despues* llega Marvin Minsky, quien logra crear la **primera red neuronal**, cuando en el año de 1951 las computadoras ocupaban cuartos completos con memoria super limitada. Sin embargo ya era demostrable que las computadoras pudieran aprender.
+
+![Marvin Minsky](https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2016/01/26/14538401873730.jpg)
+
+Y en *1952* Arthur Samuel genera el **primer programa que sabe jugar damas chinas**, y lo genera calculando los siguientes movimientos. Este programa nos permitio entender que aprender desde una perspectiva humana era:
+- Memorizar
+- Generalizar
+
+Por lo que los algoritmos basicamente recuerdan lo que han visto y en otras ocasiones generalizan esta información.
+
+![Arthur Samuel](https://i.blogs.es/589df8/650_1000_us__en_us__ibm100__700_series__checkers__620x350/450_1000.jpg)
+
+En *1957* Frank Rosenblatt **inventa el perceptron**, que podía reconocer digitos escritos a mano y convertirlos en una representación computacional.
+
+![Frank Rosenblatt](https://news.cornell.edu/sites/default/files/styles/story_thumbnail_xlarge/public/2019-09/0925_rosenblatt_main.jpg?itok=SE0aS7ds)
+
+*En 1963 Donald Michie* crea la **primera red adversarial** que permite que las computadoras puedan jugar constantemente para entender como automatizar las reglas de un juego. TIC TAC TOE
+
+![Donald Michie](https://farm1.static.flickr.com/197/519305676_4b8adcd997.jpg?v=0)
+
+*En 1969 Marvin Minsky* escribe el **libro de perceptron** donde se recolecta toda la investigación relacionada con redes neuronales. Deteniendo la investigación en inteligencia artificial por casi 20 años al pensarse que no podía llegar a desarrollarse más.
+
+![Libro Perceptrons](https://images-na.ssl-images-amazon.com/images/I/71QXEPrw3YL.jpg)
+
+
+*En el año 1997* fue el año en que la computadora Deep Blue de IBM derrota al actual campeón de ajedrez del mundo, Gary Kaspárov. Que marcó el pasó hacia la inteligencia artificial moderna.
+
+![Derrota Kasparov](https://www.imer.mx/wp-content/uploads/sites/36/11may_garykasparov_twitter.jpg)
+
+*En el 1998* se libera el dataset mnist, que aún hoy en día se sigue utilizando como el hello world de machine learning, ya que se toma este dataset con muchisimos digitos escritos a mano junto con las etiquetas de estos digitos, de tal forma que se pudieran potencializar los algoritmos que cada vez podían utilizar computo de mayor y mayor escala, aprovechando la Ley de Moore.
+
+![MINST](https://upload.wikimedia.org/wikipedia/commons/2/27/MnistExamples.png)
+
+
+*En 2009* Fei Fei Li una investigadora de estanford libero el dataset imagenet, una de las más grandes contribuidoras en el campo de la inteligencia artificial y que lideró la inteligencia artificial dentro de google. A partir de su liberación la inteligencia artificial mejoró y crecio el campo en esta areá para lograr muchas de las cosas que vemos hoy en día.
+
+![Fei fei Li](https://cms.qz.com/wp-content/uploads/2017/07/ap_318979552057.jpg?quality=75&strip=all&w=1200&h=900&crop=1)
+
+*En el año 2011* la computadora Watson de IBM que jugaba Jeopardy, derrotó a dos de los más grandes jugadores utilizando, redes neuronales, reconocimiento de patrones y retrieval de información( acceso a la información de manera muy rapida). Demostrando que las computadoras, aún en juegos muy abstractos podían derrotar a los grandes campeones del mundo.
+
+![jeopardy vs watson](https://i.ytimg.com/vi/P18EdAKuC1U/maxresdefault.jpg)
+
+
+*En el año 2012* youtube tenía gran cantidad de videos en su información, Google lográ procesar con toda su infraestructura toda la data para encontrar gatos en los videos.
+*En el 2014* implemento su algoritmo de reconocimiento facial y justamente en ese año fue cuando comenzamos a ver que podíamos etiquetar, y aún en imagenes que no nos habian etiquetado, podían detectar que nosotros apareciamos ahí.
+
+![Facial Recognition](https://blog.phonehouse.es/wp-content/uploads/2019/01/Reconocimiento-facial.jpg)
+
+*En el 2016* el algoritmo alpha go de google, derroto al respectivo campeon del mundo en el juego go. Uno de los juegos con más posibilidades y mayor demanda.
+![alpha go](https://i.blogs.es/46009f/1366_2000/1366_2000.jpg)
+
+Finalmente, para concluir debemos entender que Machine Learning se utiliza cuando:
+- Programar un algoritmo es muy complejo o no se conocen algoritmos para resolverlo
+- Ayuda a los humanos a entender patrones(data mining)
+
+Existe: 
+- Aprendizaje supervisado (etiquetado)
+- Aprendizaje no supervisado
+- Aprendizaje semisupervisado
+
+Tambien existen tecnicas:
+ - Batch (Se genera una vez y se aplica)
+ - online learning (Se va actualizando constantemente conforme entran datos.)
