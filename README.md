@@ -211,3 +211,101 @@ Existe:
 Tambien existen tecnicas:
  - Batch (Se genera una vez y se aplica)
  - online learning (Se va actualizando constantemente conforme entran datos.)
+
+## Feature Vectors
+Se utilizan para representar caracteristicas simbólicas o numéricas llamdas features, ya que nos permiten analizar un objeto desde una perspectiva matemática, debido a que los algoritmos de machine learning típicamente necesitan representaciones numéricas para poder ejecutar el cómputo.
+
+Basicamente cada vector puede contener n caracteristicas, y si lo vemos desde la perspectiva de la programación, un vector es un arreglo, donde cada elemento es una caracteristica que representa un valor.
+
+Sin embargo no es una tarea fácil definir que caracteristicas se deben vectorizar, ya que debemos tener en cuenta varios aspectos como es el peso, importancia, la forma correcta de definirlos, etc. Así que la verdadera tarea del computer scientist es analizar adecuadamente el problema para ver que es lo que importa y lo que no importa.
+
+### *Ejemplo RGB*
+
+Uno de los feature vectores más utilizados, es la representación del color a través de RGB. Bastante utilizado en el área de Disseño y Desarrollo Web para representar colores. que normalmente para definir un color unicamente se hace valer de tres **caracteristicas**: 
+   - color = [Red,Green,Blue]
+Donde cada valor, va de 0 a 255, esto nos permite describir millones de colores unicamente con esas tres.
+
+   ![RGB](https://cdn.dribbble.com/users/21285/screenshots/1280314/drib.gif)
+
+
+### *En procesamiento de imágenes:*
+  - Gradientes
+  - Border
+  - Áreas
+  - Colores 
+  - Escalas de grises.
+
+### *En reconocimiento de voz:*
+  - Distancia de sonidos.
+  - Nivel de ruido.
+  - Razón entre el ruido y la señal.
+  - Longitud de onda.
+
+### *En SPAM:*
+  - Frecuencia de palabras
+  - IP del correo
+  - Header
+  - Estructura del texto
+
+Lo importante es entender que para poder aplicar los algoritmos de machine learning, debemos poder entender vectores relevantes para el problema que se quiere resolver.
+
+## Métricas de Distancia.
+Las métricas de distancia nos permiten clasificar que tan cercanos o lejanos están los vectores que nosotros estamos incorporando directamente al algoritmo.
+
+Muchos de los algoritmos de machine learning pueden clasificarse como **algoritmos de optimización**, donde lo que principalmente se desea optimizar es una función que en muchas ocasiones se refiere a la **distancia entre vector features**.
+
+Imaginemos dos vectores **X**  y  **Y**:
+
+*x  =  (a,b)*            
+*y  =  (c,d)*
+
+Entonces para sacar la distancia podemos hacer uso de diferentes formas de medir distancia:
+
+- la distancia euclidiana.
+
+![distancia euclidiana](./img/distancia_euclidiana.jpg)
+- Distancia de Manhattan
+
+![distancia manhattan](./img/distancia_manhattan.jpg)
+
+- otros metodos para sacar distancia. 
+  - https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0144059 
+  - https://docs.scipy.org/doc/scipy/reference/spatial.distance.html
+
+
+# AGRUPAMIENTO
+
+## Introducción al agrupamiento (*clustering*)
+El agrupamiento simplemente es una forma más para poder clasificar los algoritmos de machine learning, y de hecho es una de las más comunes para clasificarlos.
+
+Los **algoritmos de _clustering_** nos permiten entender la estructura interna de los datos, sin necesidad de utilizar etiquetas. 
+Además, nos permiten agrupar cada uno de nuestros datos en diferentes grupos o *clusters* para ver que tan similares o diferentes son los datos.
+
+Cabe mencionar que a este tipo de algoritmos también se le conocen como algoritmos no supervisados ya que no requeiren etiquetas.
+
+Este tipo de algoritmos es muy utilizado en motores de recomendación, análisis de redes sociales, análisis de riesgo crediticio, clasificación de genes, riesgos médicos, motores de busqueda, etc.
+
+
+### *Referencias para profundizar*
+- https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68
+
+
+
+## Agrupamiento jerárquico.
+Es un algoritmo sencillo que simplemente agrupa objetos similares en grupos llamados clusters. 
+
+El algoritmo comienza tratando a cada objeto como un cluster individual, lugeo realiza los siguientes pasos de manera recursiva, revisando las relaciones entre sus objetos:
+- identifica los dos clusters con menos distancia( los más similares a él)
+- Agrupa los dos clusters en uno nuevo.
+
+La salida final es un dendograma que muestra la relación entre objetos y grupos.
+
+![HIERARCHICAL CLUSTERING DENDOGRAM](https://cdn-images-1.medium.com/max/640/1*ET8kCcPpr893vNZFs8j4xg.gif)
+
+Finalmente para llevarlo a cabo es importante determinar qué medida de distancia vamos a utilizar y los puntos a utilizar en cada cluster( *linkage criteria*). Para ello existen 3 diferentes metodos para medir la distancia.
+- ***Single linkage***, es tomar los puntos más cercanos.
+- ***Complete linkage*** , es tomar los puntos más lejanos (entre grupos)
+- ***Average Linkage***, buscar los puntos promedio de cada grupo.
+
+### Referencias para profundizar
+- https://www.instintoprogramador.com.mx/2019/07/clustering-jerarquico-con-python-y.html
