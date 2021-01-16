@@ -309,3 +309,4 @@ Finalmente para llevarlo a cabo es importante determinar qué medida de distanci
 
 ### Referencias para profundizar
 - https://www.instintoprogramador.com.mx/2019/07/clustering-jerarquico-con-python-y.html
+
