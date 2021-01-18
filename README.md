@@ -1,3 +1,33 @@
+Table of Contents
+=================
+
+   * [Introduccion-al-pensamiento-probabilistico](#introduccion-al-pensamiento-probabilistico)
+      * [TEOREMA DE BAYES](#teorema-de-bayes)
+   * [Mentiras estadisticas](#mentiras-estadisticas)
+      * [Garbage in, garbage out (GIGO)](#garbage-in-garbage-out-gigo)      
+      * [Imagenes engañosas](#imagenes-enga\xC3\xB1osas)
+      * [Cum Hoc Ergo Propter Hoc (<em>latin</em>)](#cum-hoc-ergo-propter-hoc-latin)
+      * [El prejuicio del muestreo](#el-prejuicio-del-muestreo)
+      * [Falacia del francotirador de Texas](#falacia-del-francotirador-de-texas)
+      * [Porcentajes confusos](#porcentajes-confusos)
+      * [Falacia de regresión](#falacia-de-regresi\xC3\xB3n)
+   * [INTRODUCCION A MACHINE LEARNING](#introduccion-a-machine-learning)
+      * [Feature Vectors](#feature-vectors)
+      * [Métricas de Distancia.](#m\xC3\xA9tricas-de-distancia)
+   * [AGRUPAMIENTO](#agrupamiento)
+      * [Introducción al agrupamiento (<em>clustering</em>)](#introducci\xC3\xB3n-al-agrupamiento-clustering)
+      * [Agrupamiento jerárquico.](#agrupamiento-jer\xC3\xA1rquico)
+
+   * [AGRUPAMIENTO](#agrupamiento)
+      * [Introducción al agrupamiento (<em>clustering</em>)](#introducci\xC3\xB3n-al-agrupamiento-clustering)         
+
+      * [Agrupamiento jerárquico.](#agrupamiento-jer\xC3\xA1rquico)
+      * [Agrupamiento K-means](#agrupamiento-k-means)
+
+Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
+
+
+
 # Introduccion-al-pensamiento-probabilistico
 curso de introduccion al pensamiento probabilistico de PLATZI 
 ## TEOREMA DE BAYES
@@ -22,10 +52,10 @@ GIGO solo nos dice que si la calidad de nuestros datos es igual de fundamental q
 En otras palabras con datos errados las conclusiones serán erradas.
 
 
-#### *Ejemplo*
+ *Ejemplo*
 > Los censos en su principio tenian muchisimos errores, y uno de los errores mas importantes es que se llego a la conclusión de que una persona de color que era libre tenian 10% más probabilidad de volverse locos que los esclavos. Sin embargo esto no era cierto, debido a que los censos eran incorrectos.
 
-#### *Otro ejemplo* aporte de Juan Moreno
+*Otro ejemplo* aporte de Juan Moreno
 
 > Una historia común sobre muestreo es el caso de los aviones aliados en la Segunda Guerra Mundial. Lo que pasó era que veían que los aviones de combate que regresaban, usualmente tenían muchas averías e impacto de proyectiles en las alas y otras áreas. Lo que pensó la RAF fue observar donde estaban los huecos, hacer un analisis de las zonas más afectadas en sus aviones y empezar a mandar los aviones reforzados en esas zonas. ¿El problema? su muestra eran aviones que sí regresaban de combate, por lo que Abraham Wald les hizo ver que si los aviones regresaban con huecos en esas partes, era porque en esas partes los impactos no eran letales y al contrario de lo que decían los datos, había que reforzar las  partes del avión que no habian sido afectadas.
 
@@ -219,7 +249,7 @@ Basicamente cada vector puede contener n caracteristicas, y si lo vemos desde la
 
 Sin embargo no es una tarea fácil definir que caracteristicas se deben vectorizar, ya que debemos tener en cuenta varios aspectos como es el peso, importancia, la forma correcta de definirlos, etc. Así que la verdadera tarea del computer scientist es analizar adecuadamente el problema para ver que es lo que importa y lo que no importa.
 
-### *Ejemplo RGB*
+***Ejemplo RGB***
 
 Uno de los feature vectores más utilizados, es la representación del color a través de RGB. Bastante utilizado en el área de Disseño y Desarrollo Web para representar colores. que normalmente para definir un color unicamente se hace valer de tres **caracteristicas**: 
    - color = [Red,Green,Blue]
@@ -228,20 +258,20 @@ Donde cada valor, va de 0 a 255, esto nos permite describir millones de colores 
    ![RGB](https://cdn.dribbble.com/users/21285/screenshots/1280314/drib.gif)
 
 
-### *En procesamiento de imágenes:*
+ ***En procesamiento de imágenes:***
   - Gradientes
   - Border
   - Áreas
   - Colores 
   - Escalas de grises.
 
-### *En reconocimiento de voz:*
+ ***En reconocimiento de voz:***
   - Distancia de sonidos.
   - Nivel de ruido.
   - Razón entre el ruido y la señal.
   - Longitud de onda.
 
-### *En SPAM:*
+ ***En SPAM:***
   - Frecuencia de palabras
   - IP del correo
   - Header
@@ -286,7 +316,7 @@ Cabe mencionar que a este tipo de algoritmos también se le conocen como algorit
 Este tipo de algoritmos es muy utilizado en motores de recomendación, análisis de redes sociales, análisis de riesgo crediticio, clasificación de genes, riesgos médicos, motores de busqueda, etc.
 
 
-### *Referencias para profundizar*
+***Referencias para profundizar***
 - https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68
 
 
@@ -307,6 +337,53 @@ Finalmente para llevarlo a cabo es importante determinar qué medida de distanci
 - ***Complete linkage*** , es tomar los puntos más lejanos (entre grupos)
 - ***Average Linkage***, buscar los puntos promedio de cada grupo.
 
-### Referencias para profundizar
+***Referencias para profundizar***
 - https://www.instintoprogramador.com.mx/2019/07/clustering-jerarquico-con-python-y.html
+- Implementación propia del [algoritmo de jerarquico en python](https://github.com/BralexMtz/Introduccion-al-pensamiento-probabilistico/blob/main/Agrupamiento%20Jerarquico/hierarchical-clustering.py)
+
+## Agrupamiento K-means
+Es un algoritmo que agrupa utilizando centroides.
+
+El algoritmo funciona asignando puntos al azar(K define el número inicial de clusters) y después:
+*  En cada iteración el punto se ajusta a su nuevo centroide y cada punto se recalcula con la distancia con respecto de los centroides.
+* Los puntos se reasignan al nuevo centro.
+* El algoritmo se repite de manera iterativa hasta que ya no existen mejoras.
+
+*Otra explicación del algoritmo*
+
+**Algoritmo k-Means**
+1. Seleccionar el **número de k grupos** (*clusters*)
+2. **Generar aleatoriamente k puntos** que llamaremos *centroides*.
+3. **Evaluar la distancia** entre cada elemento del conjunto de datos y los centroides.
+4. **Asignar el elemento al centroide** más cercano para formar k grupos.
+5. **Reasignar la posición de cada centroide**, obteniendo promedio de coordenadas.
+6. **Reasignar los elementos de datos al centroide** más cercano nuevamente
+    * Si hubo elementos que se asignaron a un **centroide distinto al original**, regresar al paso **5**
+    * De lo contrario, **el proceso ha terminado**
+
+![](https://media4.giphy.com/media/12vVAGkaqHUqCQ/giphy.gif)
+
+Este algoritmo como ya sabemos nos agrupa datos en diferentes clusters, de tal forma que al terminar podemos visualizar k grupos. 
+
+Por lo tanto si tenemos un nuevo dato, simplemente nos queda visualizar en que lado está. 
+
+
+Sin embargo, hay varias consideraciones:
+* Escoger un k que sea el más adecuado, dado que podemos generar los que sean, pero no todos van a agrupar los datos correctamente.
+
+    - Para ello debemos entender perfectamente el dominio del problema que estamos tratando de resolver, debido a que nos podra dar intuiciones sobre el numero de *k* correctos.
+* Es computacionalmente pesado hacerlo con una cantidad de datos enorme.
+
+    - Asi que debemos hacer muestreo representativos para no tener que hacer todos los calculos.
+
+
+***Referencias para profundizar***
+- https://www.jacobsoft.com.mx/es_mx/k-means-clustering-con-python/
+- http://www.it.uc3m.es/~jvillena/irc/practicas/08-09/06.pdf
+- http://www.it.uc3m.es/~jvillena/irc/practicas/08-09/06.pdf
+- https://platzi.com/clases/1621-data/21041-como-funciona-el-algoritmo-k-means/ 
+- https://www.youtube.com/watch?v=N1-eWwsM8NE
+
+
+
 
