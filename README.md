@@ -1,7 +1,15 @@
+# Introducción al pensamiento probabilistico
+
+
+
+<div align="center"> 
+  <img src="https://static.platzi.com/media/achievements/badge-introduccion-pensamiento-probabilistico-e80a0071-01ca-4d27-b49d-67b9c94ae258.png" width="15%">
+</div>
+
 Table of Contents
 =================
 
-   * [Introduccion-al-pensamiento-probabilistico](#introduccion-al-pensamiento-probabilistico)
+   * [Programación probabilistica](#programacion-probabilistica)
       * [TEOREMA DE BAYES](#teorema-de-bayes)
    * [Mentiras estadisticas](#mentiras-estadisticas)
       * [Garbage in, garbage out (GIGO)](#garbage-in-garbage-out-gigo)      
@@ -26,10 +34,8 @@ Table of Contents
 
 Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
+# Programacion probabilistica
 
-
-# Introduccion-al-pensamiento-probabilistico
-curso de introduccion al pensamiento probabilistico de PLATZI 
 ## TEOREMA DE BAYES
 ```
          P(A) P(B|A)
