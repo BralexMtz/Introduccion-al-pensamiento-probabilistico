@@ -31,7 +31,10 @@ Tabla de Contenidos
 
       * [Agrupamiento jerárquico.](#agrupamiento-jer\xC3\xA1rquico)
       * [Agrupamiento K-means](#agrupamiento-k-means)
-
+      * [Otras técnicas de agrupamiento.](#otras-t\xC3\xA9cnicas-de-agrupamiento)
+         * [Tipos de agrupamiento](#tipos-de-agrupamiento)
+         * [Modelos para determinar similitudes](#modelos-para-determinar-similitudes)
+         
 Table of Contents Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 # Programacion probabilistica
@@ -404,6 +407,25 @@ Sin embargo, hay varias consideraciones:
 - https://platzi.com/clases/1621-data/21041-como-funciona-el-algoritmo-k-means/ 
 - https://www.youtube.com/watch?v=N1-eWwsM8NE
 
+## Otras técnicas de agrupamiento.
 
+El agrupamiento es una técnica de Machine Learning que nos sirve para dividir un set de datos en grupos. De tal manera que podamos visualizar elementos similares entre los elementos del mismo grupo.
+
+### Tipos de agrupamiento
+
+Existen dos tipos de agrupamiento:
+* **Agrupamiento estricto(hard clustering)**: cada dato pertenece a un grupo u otro.
+* **Agrupamiento laxo(soft clustering)**: en lugar de asignar un dato a un grupo, se asignan probabilidades de pertenecer o no a un grupo.
+
+ Es importante analizar las necesidades que nos plantea el problema con el fin de escoger el algoritmo más adecuado.
+
+ ### Modelos para determinar similitudes
+En general existen 4 aproximaciones para definir similitud:
+ * **Modelos conectivos**: asumen que los puntos similares son los que se encuentran más cercanos en el espacio de búsqueda.  Una desventaja es que este tipo de modelos no escalan para grandes conjuntos de datos. Aunque se puede hacer uso de la *estadística inferencial*.
+ * **Modelos de centroide**: definen similitud en términos de cercanía con el centroide del grupo. Los datos se agrupan al determinar cuál es el centroide más cercano.
+ * **Modelos de distribución**: Trata de asignar probabilidades a cada dato para determinar si pertenecen a una distribución específica o no.
+ * **Modelos de densidad**: Analizan la densidad de los datos en diferentes regiones y dividen el conjunto en grupos, luego asignan los puntos de acuerdo a las áreas de densidad en las que se haya dividido el dataset.
+
+ No obstante es importante recordar que no sé trata de cuál es el mejor modelo, ya que muchas de las mejores soluciones se hacen a partir de varios modelos, para analizar el rendimiento de los diversos algoritmos que tienen a su dispocisión, experimentando y comparando resultados.
 
 
