@@ -428,4 +428,67 @@ En general existen 4 aproximaciones para definir similitud:
 
  No obstante es importante recordar que no sé trata de cuál es el mejor modelo, ya que muchas de las mejores soluciones se hacen a partir de varios modelos, para analizar el rendimiento de los diversos algoritmos que tienen a su dispocisión, experimentando y comparando resultados.
 
+# Clasificación 
+
+
+## Introducción a la clasificación 
+
+El agrupamiento es un tipo de **aprendizaje no supervisado**, ya que muchas veces no sabemos de que manera se van a agrupar, y por lo tanto no viene etiquetado.
+
+Por otro lado la clasificación si necesita de estás etiquetas(*labels*), por lo que se denomina un aprendizaje **supervisado**.
+Se utiliza en muchos campos como la medicina, aprobación, crediticia, reconocimiento de imágenes, vehículos autónomos, entre otros.
+
+Para poder realizar un algoritmo de clasificación basicamente se necesitan 2 pasos.
+* **Aprendizaje** : creación del modelo a partir de un dataset
+* **Clasificación**: de un dato nuevo sin etiqueta
+
+
+**NOTA**: Tambien existe el aprendizaje semisupervisado, como por ejemplo *google fotos* cuando a partir de lo que tu le dices cierta información, se puede clasificar los demás.
+
+Otra diferencia importante entre el agrupamiento y la clasificación se ve en la siguiente imagen.
+
+<img src="https://miro.medium.com/max/4034/1*H-0Hu35Un_buwheCFlTvbA.png" alt="clustering vs classification" />
+
+En la imagen podemos ver que el clustering es separa los datos en clusters o regiones, mientras que la clasificación lo hace a partir de lineas rectas o curvas que atraviesan el espacio.
+
+## Clasificación K-nearest neighbors
+
+Es uno de los algoritmos más importantes y antiguos.dentro del mundo del Machine Learning.
+
+Partimos suponiendo que ya tenemos un conjunto de datos clasificados y queremos saber cual es la etiqueta o clasificación de un nuevo dato. 
+
+Se llama *K-nearest neighbors* porque tratamos de encontrar a los vecinos más cercanos. Donde K es la cantidad de vecinos que se utilizarán para clasificar el nuevo dato.
+
+**Ventajas**
+
+Es sencillo de implementar y tiene aplicaciones en medicina, finanzas, agricultura, etc
+
+**Desventajas**
+
+Es computacionalmente muy costoso y no sirve con datos de alta dimensionalidad, por lo que es recomendable es buscar una muestra representativa y aleatoria.
+
+<img src="https://machinelearningknowledge.ai/wp-content/uploads/2018/08/KNN-Classification.gif" alt="K-Nearest Neighbors Classificaction" width="60%">
+
+Basicamente, el algortimo es:
+
+1. toma el nuevo valor y evalua a los k puntos más cercanos a él pasando por todos los puntos.
+2. Contamos cuantos puntos pertencen a cada clasificación de los k más cercanos.
+3. Definimos la clasificación de acuerda a que cantidad de puntos son mayoria a nosotros.
+
+La manera de clasificar es bastante simple, sin embargo existe un inconveniente cuando el valor de K es un numero par, ya que podríamos tener la misma cantidad de una clasificación, com la misma de la otra y seguiriamos con la misma pregunta.¿A qué clasificación pertenece?
+
+Bueno, pues para solucionar esto podrías tomar en cuenta no sólo la cantidad de puntos que pertenecen a la clasificación, sino que también podemos tomar en cuenta la distancia que tenemos a estos puntos.
+
+**Referencias para revisar**
+
+- https://www.linkedin.com/pulse/c%C3%B3mo-predecir-el-valor-de-un-inmueble-con-big-data-y-puentes-n%C3%BA%C3%B1ez?articleId=6434535948884721664#comments-6434535948884721664&trk=public_profile_article_view
+
+
+
+
+
+
+
+
+
 
