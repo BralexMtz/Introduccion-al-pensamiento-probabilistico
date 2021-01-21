@@ -439,8 +439,8 @@ Por otro lado la clasificación si necesita de estás etiquetas(*labels*), por l
 Se utiliza en muchos campos como la medicina, aprobación, crediticia, reconocimiento de imágenes, vehículos autónomos, entre otros.
 
 Para poder realizar un algoritmo de clasificación basicamente se necesitan 2 pasos.
-* **Aprendizaje** : creación del modelo a partir de un dataset
-* **Clasificación**: de un dato nuevo sin etiqueta
+   * **Aprendizaje** : creación del modelo a partir de un dataset
+   * **Clasificación**: de un dato nuevo sin etiqueta
 
 
 **NOTA**: Tambien existe el aprendizaje semisupervisado, como por ejemplo *google fotos* cuando a partir de lo que tu le dices cierta información, se puede clasificar los demás.
@@ -479,9 +479,63 @@ La manera de clasificar es bastante simple, sin embargo existe un inconveniente 
 
 Bueno, pues para solucionar esto podrías tomar en cuenta no sólo la cantidad de puntos que pertenecen a la clasificación, sino que también podemos tomar en cuenta la distancia que tenemos a estos puntos.
 
-**Referencias para revisar**
+***Referencias para revisar***
 
 - https://www.linkedin.com/pulse/c%C3%B3mo-predecir-el-valor-de-un-inmueble-con-big-data-y-puentes-n%C3%BA%C3%B1ez?articleId=6434535948884721664#comments-6434535948884721664&trk=public_profile_article_view
+
+
+## Otras tecnicas de clasificación
+
+Una forma de ver los algoritmos de clasificación es pensar en el sombrero clasificador de Harry Potter.
+
+<img src="https://i.pinimg.com/originals/79/f1/8d/79f18dc39cf34c97d92f36770712a8a5.gif" alt="Sombrero clasificador de Harry Potter" width="80%">
+
+Cuando un nuevo alumno de Hogwarts entra a la escuela es necesario asignarlo/clasificarlo en una de las 4 casas. Por lo que el sombrero obtiene los datos cuando se le coloca el alumno y define cuál es el mejor match para su casi particular.
+
+Podríamos decir que el sombrero es un algoritmo que ya ha sido entrenado y que los alumnos son nuevos data points que tienen que ser clasificados.
+
+### Clasificadores lineales
+
+Se le llaman lineales porque dividen el conjunto de datos con una línea, donde la linea puede ser multidimensional, y esto depende de la cantidad de *caracteristicas* que hemos utilizado para definir al vector de nuestro dato. Esto generará áreas dentro de nuestro espacio de búsqueda para que cuando coloquemos un nuevo dato podamos clasificarlo fácilmente.
+
+Sin embargo, la facilidad tiene un costo y es que el modelo no es tan flexible cuando el conjunto de datos no puede ser separado por una simple línea, ya que podríamos necesitar de figuras más complejas.
+
+### Regresión logística
+
+Estos algoritmos se parecen mucho a los clasificadores lineales, con la diferencia de que no se divide simplemente con una línea, sino con un gradiente que determina la probabilidad de que un nuevo dato pertenezca a cada categoría existente. Por lo que dependiendo de la posición o que tanto se aleje, va a incrementar o disminuir la probabilidad de que pertenezca a una categoría.
+
+Podemos visualizar esto como un algoritmo que genera áreas de alta probabilidad a cierta categoría y otras áreas donde no sabemos a ciencia cierta donde pertenece el nuevo dato.
+
+### Nearest neighbor
+
+Este modelo se apoya directamente de los datos que ya han sido clasificados, de tal forma que podemos determinar la distancia entre sus vecinos más cercanos". 
+El algoritmo más común es el K-nearest neighbors y la K representa el numero de vecinos más cercanos que se utilizaran para clasificar los datos. De tal forma que se toman k vecinos y de esos k, vemos cuantos pertenecen a una categoría y cuantos a otra y finalmente pertenece a la categoría que tenga más *puntos* cercanos.
+
+
+### Support Vector Machines
+
+Este algoritmo tiene la caracteristica de poder agrupar datos con diferentes formas complejas como podrían ser circulos, polígonos, etc. Por lo que si se necesitan formas ajenas a una línea, esta es una buena opción.
+
+### Árboles de decisión
+
+Este tipo de algoritmos nos permiten generar un árbol que tenemos que recorrer y tomar decisiones(como dibujar una línea) cada vez que avanzamos un nivel o *feature por feature*.
+
+
+### ¿Que algoritmo escoger?
+
+Esto depende de la forma en que tengas tus datos y la precisión que desees obtener, ya que podrías incluir falsos positivos  y negativos.
+
+Además, es que estos algoritmos deben ser entrenados con datos previos y la calidad de estos datos importan mucho para el entrenamiento del modelo y por lo tanto para obtener una mejor clasificación.
+
+***Referencias para profundizar***
+
+- [Documentación de Scikit-Learn](https://scikit-learn.org/stable/user_guide.html)
+- [Blog sobre el uso de arboles en Machine Learning](https://www.aprendemachinelearning.com/arbol-de-decision-en-python-clasificacion-y-prediccion/)
+- [Support Vector Machine Theory - Medium](https://medium.com/machine-learning-101/chapter-2-svm-support-vector-machine-theory-f0812effc72)
+- [Machine Learning Blog](https://www.aprendemachinelearning.com/que-es-machine-learning/)
+
+
+
 
 
 
