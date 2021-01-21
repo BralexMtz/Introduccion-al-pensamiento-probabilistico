@@ -27,13 +27,22 @@ Tabla de Contenidos
       * [Agrupamiento jerárquico.](#agrupamiento-jer\xC3\xA1rquico)
 
    * [AGRUPAMIENTO](#agrupamiento)
-      * [Introducción al agrupamiento (<em>clustering</em>)](#introducci\xC3\xB3n-al-agrupamiento-clustering)         
-
+      * [Introducción al agrupamiento (<em>clustering</em>)](#introducci\xC3\xB3n-al-agrupamiento-clustering)
       * [Agrupamiento jerárquico.](#agrupamiento-jer\xC3\xA1rquico)
       * [Agrupamiento K-means](#agrupamiento-k-means)
       * [Otras técnicas de agrupamiento.](#otras-t\xC3\xA9cnicas-de-agrupamiento)
          * [Tipos de agrupamiento](#tipos-de-agrupamiento)
          * [Modelos para determinar similitudes](#modelos-para-determinar-similitudes)
+   * [Clasificación](#clasificaci\xC3\xB3n)
+      * [Introducción a la clasificación](#introducci\xC3\xB3n-a-la-clasificaci\xC3\xB3n)
+      * [Clasificación K-nearest neighbors](#clasificaci\xC3\xB3n-k-nearest-neighbors)
+      * [Otras tecnicas de clasificación](#otras-tecnicas-de-clasificaci\xC3\xB3n)
+         * [Clasificadores lineales](#clasificadores-lineales)
+         * [Regresión logística](#regresi\xC3\xB3n-log\xC3\xADstica)
+         * [Nearest neighbor](#nearest-neighbor)
+         * [Support Vector Machines](#support-vector-machines)
+         * [Árboles de decisión](#\xC3\xA1rboles-de-decisi\xC3\xB3n)
+         * [¿Que algoritmo escoger?](#que-algoritmo-escoger)
          
 Table of Contents Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
